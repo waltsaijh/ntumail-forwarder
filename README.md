@@ -6,10 +6,10 @@
 
 ## 設定
 
-1. 複製此 Template，名稱隨意
+1. 複製此 Template，名稱隨意，但建議把可見性改為私人
 2. 進入新打開的 Repository
 3. 在導覽列 (最上方那排) 點選 Settings => Secrets & Variables => Actions
-4. 新增三個 Secrets，可防止帳密外洩
+4. 新增三個 Repository Secrets，可防止帳密外洩
     - `NTUMAIL_ADDRESS`: 你的 NTUMail 信箱 (...@ntu.edu.tw)
     - `NTUMAIL_PASSWORD`: 你的密碼
     - `FORWARDING_ADDRESSES`: 目標轉寄信箱，超過一個則用 `, ` 隔開
@@ -17,4 +17,5 @@
 
 ## 補充事項
 
-請注意，此應用只會轉寄新進入的郵件，故啟動前的所有郵件均會被忽略，而不會被轉寄至其他信箱。
+1. 由於此應用使用 Github Cron 完成每小時轉寄 NTUMail 郵件，其郵件轉寄的時間**並不一定**是每小時一次。
+2. 此應用只會轉寄新進入的郵件，故啟動前的所有郵件均會被忽略，而不會被轉寄至其他信箱。
